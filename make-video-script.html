@@ -28,6 +28,7 @@
       ["？", "？\n\n"],
       [" ", "\n"],
       [/(\r\n){3,}|\r{3,}|\n{3,}/g, "\n\n"], // 3連続以上の改行を2行の改行に変換する: https://qiita.com/70ki8suda/items/42bd22376a90fc3d1c8e
+      ["\t", "\n"],
     ];
     function onClickButton() {
       const originalInput = document.getElementById("input").value;
