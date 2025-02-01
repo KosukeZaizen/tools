@@ -35,12 +35,16 @@
       ["!\n\n\"\n", "!\"\n"], // エクスクラメーションマークで終わる英文がダブルクオーテーション内にある場合のケア
       ["?\n\n\"\n", "?\"\n"], // クエスチョンで終わる英文がダブルクオーテーション内にある場合のケア
       [".\n\n\"\n", ".\"\n"], // ピリオドで終わる英文がダブルクオーテーション内にある場合のケア
+
+      ["!\n\nhaha\n", "!\nhaha\n"], // haha
+      ["?\n\nhaha\n", "?\nhaha\n"], // haha
+      [".\n\nhaha\n", ".\nhaha\n"], // haha
     ];
     function onClickButton() {
       const originalInput = document.getElementById("input").value;
       const result = arrCharToReplace.reduce((acc, val) => {
         return acc.replaceAll(val[0], val[1]);
-      }, originalInput);
+      }, originalInput) + "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 
       document.getElementById("output").value = result;
     }
